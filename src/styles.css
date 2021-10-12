@@ -1,3 +1,9 @@
+/* eslint-disable */
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-container {
+  @apply text-base md:text-lg lg:text-2xl flex font-serif text-gray-500 justify-between bg-blue-100 p-6 align-baseline items-center;
+}
