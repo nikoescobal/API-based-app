@@ -3,9 +3,9 @@ const createLikes = async (artID) => {
   const resp = await fetch(,{
     method: 'POST',
     headers: {
-      'Content-type': 'application/json; Charset=UTF-8'
+      'Content-type': 'application/json; Charset=UTF-8',
     },
-    body: data
+    body: data,
   });
-  return resp.text()
-} 
+  return resp.text();
+};
