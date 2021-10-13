@@ -506,6 +506,13 @@ video {
 	font-weight: 700;
 }
 
+.main-container {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .nav-container {
 	display: flex;
 	align-items: center;
@@ -520,6 +527,7 @@ video {
 	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
+	font-weight: 700;
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
@@ -577,6 +585,23 @@ video {
 		margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
 	}
 }
+.footer {
+	display: flex;
+	justify-content: center;
+}
+.footer > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+	margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.footer {
+	--tw-bg-opacity: 1;
+	background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+	padding: 1rem;
+	text-align: center;
+	--tw-text-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
 
 #logo {
 	font-size: 1rem;
@@ -595,6 +620,13 @@ video {
 		font-size: 1.875rem;
 		line-height: 2.25rem;
 	}
+}
+.container {
+	height: auto;
+	width: 50%;
+	max-width: 100%;
+}
+@media (min-width: 1024px) {
 	.lg\:w-12 {
 		width: 3rem;
 	}
