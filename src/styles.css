@@ -4,29 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-container {
+  @apply flex flex-col justify-between h-screen
+}
+
 .nav-container {
-  @apply text-sm md:text-lg lg:text-2xl flex font-serif text-gray-500 justify-between bg-blue-100 py-6 px-4 md:px-6 lg:px-10 align-baseline items-center;
+  @apply text-sm md:text-lg font-bold lg:text-2xl flex font-serif text-gray-500 justify-between bg-blue-100 py-6 px-4 md:px-6 lg:px-10 align-baseline items-center;
 }
 
 .nav-items {
   @apply flex justify-between px-4 space-x-4 md:space-x-10 lg:space-x-16;
+}
+.footer {
+  @apply  flex text-center p-4 text-gray-500 justify-center  bg-blue-100 space-x-2 
 }
 
 #logo {
   @apply text-base md:text-lg lg:text-3xl;
 }
 .container {
-  @apply w-1/2 h-auto max-w-full 
-  height: auto;
-  max-width: 960px;
-  margin: 20px auto;
-  border-radius: 6px;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  padding: 0 0 20px;
-  overflow: hidden;
-  border: 1px solid lightgray;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @apply w-1/2 h-auto max-w-full
 }
