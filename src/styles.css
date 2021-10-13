@@ -22,6 +22,4 @@
 #logo {
   @apply text-base md:text-lg lg:text-3xl;
 }
-.container {
-  @apply w-1/2 h-auto max-w-full
-}
+
