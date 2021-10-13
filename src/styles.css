@@ -15,3 +15,18 @@
 #logo {
   @apply text-base md:text-lg lg:text-3xl;
 }
+.container {
+  @apply w-1/2 h-auto max-w-full 
+  height: auto;
+  max-width: 960px;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
