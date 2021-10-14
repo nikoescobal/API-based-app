@@ -563,15 +563,11 @@ video {
 .align-middle {
 	vertical-align: middle;
 }
-.font-serif {
-	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+.font-raleway {
+	font-family: "Raleway", sans-serif;
 }
-.font-sans {
-	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.text-3xl {
-	font-size: 1.875rem;
-	line-height: 2.25rem;
+.font-nunito {
+	font-family: "Nunito", sans-serif;
 }
 .text-lg {
 	font-size: 1.125rem;
@@ -583,6 +579,9 @@ video {
 }
 .font-bold {
 	font-weight: 700;
+}
+.font-extralight {
+	font-weight: 200;
 }
 .font-thin {
 	font-weight: 100;
@@ -611,7 +610,7 @@ body {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	vertical-align: baseline;
-	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 0.75rem;
 	line-height: 1rem;
 	font-weight: 700;
@@ -701,33 +700,36 @@ body {
 	background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
 	padding: 1rem;
 	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
 
 #logo {
-	font-size: 0.875rem;
-	line-height: 1.25rem;
+	font-family: "Italianno", cursive;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 @media (min-width: 640px) {
-	#logo {
-		font-size: 1.125rem;
-		line-height: 1.75rem;
-	}
-}
-
-@media (min-width: 768px) {
 	#logo {
 		font-size: 1.5rem;
 		line-height: 2rem;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 	#logo {
 		font-size: 1.875rem;
 		line-height: 2.25rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	#logo {
+		font-size: 3rem;
+		line-height: 1;
 	}
 }
 
