@@ -473,12 +473,19 @@ video {
 [hidden] {
   display: none;
 }
+*, ::before, ::after {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
 .flex {
 	display: flex;
+}
+.grid {
+	display: grid;
 }
 .h-full {
 	height: 100%;
@@ -489,8 +496,66 @@ video {
 .w-8 {
 	width: 2rem;
 }
+.grid-cols-1 {
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-col {
+	flex-direction: column;
+}
 .items-center {
 	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.gap-4 {
+	gap: 1rem;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * var(--tw-space-x-reverse));
+	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+	margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.border-4 {
+	border-width: 4px;
+}
+.border-double {
+	border-style: double;
+}
+.border-blue-300 {
+	--tw-border-opacity: 1;
+	border-color: rgba(147, 197, 253, var(--tw-border-opacity));
+}
+.bg-white {
+	--tw-bg-opacity: 1;
+	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+.p-6 {
+	padding: 1.5rem;
+}
+.p-3 {
+	padding: 0.75rem;
+}
+.px-3 {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+.py-3 {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
 }
 .text-center {
 	text-align: center;
@@ -498,12 +563,32 @@ video {
 .align-middle {
 	vertical-align: middle;
 }
+.font-raleway {
+	font-family: "Raleway", sans-serif;
+}
+.font-nunito {
+	font-family: "Nunito", sans-serif;
+}
 .text-3xl {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 }
+.text-lg {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+.text-base {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
 .font-bold {
 	font-weight: 700;
+}
+.font-extralight {
+	font-weight: 200;
+}
+.font-thin {
+	font-weight: 100;
 }
 
 .nav-container {
@@ -595,6 +680,15 @@ video {
 		font-size: 1.875rem;
 		line-height: 2.25rem;
 	}
+}
+
+@media (min-width: 768px) {
+	.md\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
 	.lg\:w-12 {
 		width: 3rem;
 	}
