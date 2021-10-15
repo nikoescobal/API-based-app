@@ -8,12 +8,12 @@ const getImages = async () => {
   const images = data.data;
 
   const imageString = images.map((image) => ({
-      id: image.id,
-      image_id: image.image_id,
-      title: image.title,
-      date: image.date_start,
-      artist: image.artist_title,
-    }))
+    id: image.id,
+    image_id: image.image_id,
+    title: image.title,
+    date: image.date_start,
+    artist: image.artist_title,
+  }))
     .filter((image) => image.image_id !== null && image.title !== null)
     .map((img) => `<article
    class="flex justify-center w-full h-full p-3 flex-col space-y-2 border-double border-4 border-blue-300 bg-white">
@@ -29,9 +29,11 @@ const getImages = async () => {
      </figcaption>
    </figure>
  </article>`).join('');
-  artContent.innerHTML = imageString;
+  const uniqueImages = [...new Set(imageString)];
+
+  artContent.innerHTML = uniqueImages;
   artContainer.appendChild(artContent);
-  console.log(imageString);
+  console.log(uniqueImages);
 };
 
 getImages();
