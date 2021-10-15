@@ -22,6 +22,9 @@ body {
 .footer {
   @apply flex text-center font-bold p-4 text-gray-500 justify-center font-raleway bg-blue-100 space-x-2;
 }
+.footer {
+  @apply flex text-center p-4 text-gray-500 justify-center  bg-blue-100 space-x-2;
+}
 
 #logo {
   @apply text-base font-italianno sm:text-2xl md:text-3xl lg:text-5xl;
