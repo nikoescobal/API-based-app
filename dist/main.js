@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://js-template/./src/index.js?");
+eval("const url = 'https://api.artic.edu/api/v1/artworks'\n\nconst getImages = async () => {\n  const response = await fetch(url);\n  const data = await response.json();\n  const images = data.data;\n\n  let imageString = images.map((image) => {\n    return {\n      id: image['id'],\n      image_id: image['image_id'],\n      title: image['title'],\n      date: image['date_start']\n    }\n  })\n  imageString = imageString.filter(image => image.image_id !== null && image.title !== null);\n\n  console.log(imageString);\n}\n\ngetImages();\n\n//# sourceURL=webpack://js-template/./src/index.js?");
 
 /***/ })
 
