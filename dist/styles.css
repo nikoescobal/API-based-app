@@ -720,8 +720,8 @@ body {
 
 #logo {
 	font-family: "Italianno", cursive;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
 }
 
 @media (min-width: 640px) {

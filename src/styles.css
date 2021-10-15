@@ -27,5 +27,5 @@ body {
 }
 
 #logo {
-  @apply text-base font-italianno sm:text-2xl md:text-3xl lg:text-5xl;
+  @apply text-lg font-italianno sm:text-2xl md:text-3xl lg:text-5xl;
 }
