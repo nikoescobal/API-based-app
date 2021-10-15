@@ -1,4 +1,4 @@
-const url = 'https://api.artic.edu/api/v1/artworks'
+const url = 'https://api.artic.edu/api/v1/artworks';
 const artContent = document.createElement('div');
 const artContainer = document.getElementById('art-container');
 
@@ -7,17 +7,15 @@ const getImages = async () => {
   const data = await response.json();
   const images = data.data;
 
-  const imageString = images.map((image) => {
-      return {
-        id: image['id'],
-        image_id: image['image_id'],
-        title: image['title'],
-        date: image['date_start'],
-        artist: image['artist_title']
-      }
-    })
-    .filter(image => image.image_id !== null && image.title !== null)
-    .map(img => `<article
+  const imageString = images.map((image) => ({
+    id: image.id,
+    image_id: image.image_id,
+    title: image.title,
+    date: image.date_start,
+    artist: image.artist_title,
+  }))
+    .filter((image) => image.image_id !== null && image.title !== null)
+    .map((img) => `<article
    class="flex justify-center w-full h-full p-3 flex-col space-y-2 border-double border-4 border-blue-300 bg-white">
    <h2 class="font-bold font-raleway text-lg">${img.title},
      ${img.date}</h2>
@@ -32,8 +30,8 @@ const getImages = async () => {
    </figure>
  </article>`).join('');
   artContent.innerHTML = imageString;
-  artContainer.appendChild(artContent)
+  artContainer.appendChild(artContent);
   console.log(imageString);
-}
+};
 
 getImages();
