@@ -1,55 +1,39 @@
-// internet example
+const url = 'https://api.artic.edu/api/v1/artworks'
+const artContent = document.createElement('div');
+const artContainer = document.getElementById('art-container');
 
-// async function getUserAsync(name) {
-//   let response = await fetch(`https://api.github.com/users/${name}`);
-//   let data = await response.json()
-//   return data;
-// }
+const getImages = async () => {
+  const response = await fetch(url);
+  const data = await response.json();
+  const images = data.data;
 
-// getUserAsync('https://api.github.com/users/nikoescobal')
-//   .then(data => console.log(data));
+  const imageString = images.map((image) => {
+      return {
+        id: image['id'],
+        image_id: image['image_id'],
+        title: image['title'],
+        date: image['date_start'],
+        artist: image['artist_title']
+      }
+    })
+    .filter(image => image.image_id !== null && image.title !== null)
+    .map(img => `<article
+   class="flex justify-center w-full h-full p-3 flex-col space-y-2 border-double border-4 border-blue-300 bg-white">
+   <h2 class="font-bold font-raleway text-lg">${img.title},
+     ${img.date}</h2>
+   <h3 class="px-3 font-extralight font-raleway">${img.artist}</h3>
+   <img src="https://www.artic.edu/iiif/2/${img.image_id}/full/843,/0/default.jpg"
+     alt="image of artwork">
+   <figure class="flex justify-between px-3 space-x-4">
+     <figcaption class="flex py-3 space-x-6 text-base w-full font-nunito">
+       <img id="${img.id}" src="/src/heart-filled.png" alt="heart icon">&nbsp; Like
+       <img id="${img.id}" src="/src/comment.png" alt="comment icon">&nbsp; Comment
+     </figcaption>
+   </figure>
+ </article>`).join('');
+  artContent.innerHTML = imageString;
+  artContainer.appendChild(artContent)
 
+}
 
-// example from previous project
-
-//   export const postScore = async (name, score) => {
-//   await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tv1zYAf6WtGRuAGhGsuk/scores', {
-//     method: 'post',
-//     headers: {
-//       Accept: 'application/json, text/plain, */*',
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       user: name,
-//       score,
-//     }),
-//   }).then((res) => res.json()).then((data) => data);
-// };
-
-// export const getScores = async () => {
-//   const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tv1zYAf6WtGRuAGhGsuk/scores');
-//   const data = await response.json();
-//   return data;
-// };
-
-// example attempt
-
-// const url = 'https://pokeapi.co/api/v2/pokemon/1'
-
-// const getPokemon = async () => {
-//   const resp = await fetch(url);
-//   const data = await resp.json();
-//   console.log(data);
-//   document.getElementById("pokemon").textContent = data.name;
-// };
-
-// getPokemon();
-
-
-// actual attempt
-
-// export const getImages = async () => {
-//   let response = await fetch(`https://www.artic.edu/iiif/2/{identifier}/{region}/{size}/{rotation}/{quality}.{format}`);
-//   let data = await response.json();
-//   return data;
-// }
+getImages();
