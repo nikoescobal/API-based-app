@@ -29,11 +29,9 @@ const getImages = async () => {
      </figcaption>
    </figure>
  </article>`).join('');
-  const uniqueImages = [...new Set(imageString)];
-
-  artContent.innerHTML = uniqueImages;
+  artContent.innerHTML = imageString;
   artContainer.appendChild(artContent);
-  console.log(uniqueImages);
+  console.log(imageString);
 };
 
 getImages();
