@@ -5,7 +5,13 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'nunito': ['"Nunito"', 'sans-serif'],
+        'italianno': ['"Italianno"', 'cursive'],
+        'raleway': ['"Raleway"', 'sans-serif'],
+      }
+    },
   },
   variants: {
     extend: {},
