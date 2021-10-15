@@ -1,43 +1,21 @@
-<<<<<<< HEAD
 const url = 'https://api.artic.edu/api/v1/artworks';
 const artContent = document.createElement('div');
 const artContainer = document.getElementById('art-container');
-=======
-const url = 'https://api.artic.edu/api/v1/artworks'
-  const div = document.createElement('div');
-  const artContainer = document.getElementById('art-container');
-
-
->>>>>>> dd1eb26d3806fa93862acd1f4120fcd79df6fc84
 
 const getImages = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const images = data.data;
 
-<<<<<<< HEAD
   const imageString = images.map((image) => ({
-    id: image.id,
-    image_id: image.image_id,
-    title: image.title,
-    date: image.date_start,
-    artist: image.artist_title,
-  }))
+      id: image.id,
+      image_id: image.image_id,
+      title: image.title,
+      date: image.date_start,
+      artist: image.artist_title,
+    }))
     .filter((image) => image.image_id !== null && image.title !== null)
     .map((img) => `<article
-=======
-  const imageString = images.map((image) => {
-    return {
-      id: image['id'],
-      image_id: image['image_id'],
-      title: image['title'],
-      date: image['date_start'],
-      artist: image['artist_title']
-    }
-  })
-  .filter(image => image.image_id !== null && image.title !== null)
-  .map(img =>  `<article
->>>>>>> dd1eb26d3806fa93862acd1f4120fcd79df6fc84
    class="flex justify-center w-full h-full p-3 flex-col space-y-2 border-double border-4 border-blue-300 bg-white">
    <h2 class="font-bold font-raleway text-lg">${img.title},
      ${img.date}</h2>
@@ -51,13 +29,9 @@ const getImages = async () => {
      </figcaption>
    </figure>
  </article>`).join('');
-<<<<<<< HEAD
   artContent.innerHTML = imageString;
   artContainer.appendChild(artContent);
   console.log(imageString);
 };
-=======
-}
->>>>>>> dd1eb26d3806fa93862acd1f4120fcd79df6fc84
 
 getImages();
