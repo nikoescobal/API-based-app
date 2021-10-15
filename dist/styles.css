@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* stylelint-disable */
-/* ! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -582,69 +582,6 @@ video {
 }
 .font-extralight {
 	font-weight: 200;
-}
-.font-thin {
-	font-weight: 100;
-}
-
-body {
-	--tw-bg-opacity: 1;
-	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-
-.main-container {
-	display: flex;
-	height: 100vh;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.nav-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	--tw-bg-opacity: 1;
-	background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	vertical-align: baseline;
-	font-family: "Nunito", sans-serif;
-	font-size: 0.75rem;
-	line-height: 1rem;
-	font-weight: 700;
-	--tw-text-opacity: 1;
-	color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-	.nav-container {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	.nav-container {
-		font-size: 1rem;
-		line-height: 1.5rem;
-	}
-}
-
-@media (min-width: 768px) {
-	.nav-container {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-	}
-	.nav-container {
-		font-size: 1.125rem;
-		line-height: 1.75rem;
-	}
-}
-
-@media (min-width: 1024px) {
-	.nav-container {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
-	}
 }
 
 .nav-items {
