@@ -4,18 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-}
 .nav-items {
   @apply flex justify-between px-4 space-x-2 sm:space-x-4 md:space-x-10 lg:space-x-16;
 }
 .footer {
   @apply flex text-center font-bold p-4 text-gray-500 justify-center font-raleway bg-blue-100 space-x-2;
 }
-.footer {
-
-}
 
 #logo {
   @apply text-base font-italianno sm:text-2xl md:text-3xl lg:text-5xl;
 }
-
