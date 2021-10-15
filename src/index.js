@@ -33,7 +33,7 @@ const getImages = async () => {
  </article>`).join('');
   artContent.innerHTML = imageString;
   artContainer.appendChild(artContent)
-
+  console.log(imageString);
 }
 
 getImages();
