@@ -1,6 +1,7 @@
 const url = 'https://api.artic.edu/api/v1/artworks';
 const artContent = document.createElement('div');
 const artContainer = document.getElementById('art-container');
+artContent.classList.add('w-full', 'grid', 'grid-cols-2', 'p-6', 'gap-4');
 
 const getImages = async () => {
   const response = await fetch(url);
@@ -20,7 +21,7 @@ const getImages = async () => {
    <h2 class="font-bold font-raleway text-lg">${img.title},
      ${img.date}</h2>
    <h3 class="px-3 font-extralight font-raleway">${img.artist}</h3>
-   <img src="https://www.artic.edu/iiif/2/${img.image_id}/full/843,/0/default.jpg"
+   <img class="h-4/5 object-cover" src="https://www.artic.edu/iiif/2/${img.image_id}/full/843,/0/default.jpg"
      alt="image of artwork">
    <figure class="flex justify-between px-3 space-x-4">
      <figcaption class="flex py-3 space-x-6 text-base w-full font-nunito">

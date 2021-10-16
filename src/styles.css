@@ -9,7 +9,7 @@ body {
 }
 
 .main-container {
-  @apply flex flex-col justify-between h-screen;
+  @apply flex flex-col w-full justify-between h-screen;
 }
 
 .nav-container {
