@@ -33,12 +33,12 @@ const getImages = async () => {
   const images = data.data;
 
   const imageString = images.map((image) => ({
-    id: image.id,
-    image_id: image.image_id,
-    title: image.title,
-    date: image.date_start,
-    artist: image.artist_title,
-  }))
+      id: image.id,
+      image_id: image.image_id,
+      title: image.title,
+      date: image.date_start,
+      artist: image.artist_title,
+    }))
     .filter((image) => image.image_id !== null && image.artist !== null)
     .map((img) => `<article
       class="article-style">
@@ -49,7 +49,7 @@ const getImages = async () => {
         alt="image of artwork">
       <figure class="caption-container">
         <figcaption class="caption-content">
-          <img class="like" id="${img.id}" src="/src/heart-empty.png" alt="heart icon">&nbsp; <span class="like-count"></span>
+          <img class="like" id="${img.id}" src="/src/heart-empty.png" alt="like icon">&nbsp; <span class="like-count"></span>
           <img class="comment" id="${img.id}" src="/src/comment.png" alt="comment icon">&nbsp; Comment
         </figcaption>
       </figure>
