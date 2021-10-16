@@ -8,20 +8,24 @@ function addLikes(index) {
   const likeCounterElement = document.querySelectorAll('.like-count');
   likeCounterElement.forEach((likeElement, likeElementIndex) => {
     if (index === likeElementIndex) {
-      likeCount++;
+      likeCount += 1;
       likeElement.innerHTML += `${likeCount}Likes`;
     }
   });
-};
+}
 
+/* eslint-disable */
+/* stylelint-disable */
 const getLikeElements = () => {
   const hearts = document.querySelectorAll('.like');
   hearts.forEach((heart, index) => {
     heart.addEventListener('click', (e) => {
-      addLikes(index)
-    })
+      addLikes(index);
+    });
   });
 };
+/* eslint-enable */
+/* stylelint-enable */
 
 const getImages = async () => {
   const response = await fetch(url);
@@ -29,12 +33,12 @@ const getImages = async () => {
   const images = data.data;
 
   const imageString = images.map((image) => ({
-      id: image.id,
-      image_id: image.image_id,
-      title: image.title,
-      date: image.date_start,
-      artist: image.artist_title,
-    }))
+    id: image.id,
+    image_id: image.image_id,
+    title: image.title,
+    date: image.date_start,
+    artist: image.artist_title,
+  }))
     .filter((image) => image.image_id !== null && image.artist !== null)
     .map((img) => `<article
       class="article-style">
