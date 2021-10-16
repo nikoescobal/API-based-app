@@ -33,12 +33,12 @@ const getImages = async () => {
   const images = data.data;
 
   const imageString = images.map((image) => ({
-      id: image.id,
-      image_id: image.image_id,
-      title: image.title,
-      date: image.date_start,
-      artist: image.artist_title,
-    }))
+    id: image.id,
+    image_id: image.image_id,
+    title: image.title,
+    date: image.date_start,
+    artist: image.artist_title,
+  }))
     .filter((image) => image.image_id !== null && image.artist !== null)
     .map((img) => `<article
       class="article-style">
