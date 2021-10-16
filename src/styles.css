@@ -8,6 +8,14 @@ body {
   @apply bg-gray-100;
 }
 
+#collection,
+#logo,
+#art,
+#reserve,
+#artworks {
+  @apply hover:text-blue-700 cursor-pointer;
+}
+
 .art-style {
   @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 gap-4;
 }
@@ -29,7 +37,7 @@ body {
 }
 
 .nav-items {
-  @apply flex justify-between px-4 space-x-2 sm:space-x-4 md:space-x-10 lg:space-x-16;
+  @apply flex justify-between px-4  space-x-2 sm:space-x-4 md:space-x-10 lg:space-x-16;
 }
 .footer {
   @apply flex text-center font-bold p-4 text-gray-500 justify-center font-raleway bg-blue-100 space-x-2;

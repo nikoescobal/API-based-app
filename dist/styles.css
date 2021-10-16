@@ -583,6 +583,15 @@ body {
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
 
+#collection, #logo, #art, #reserve, #artworks {
+	cursor: pointer;
+}
+
+#collection:hover, #logo:hover, #art:hover, #reserve:hover, #artworks:hover {
+	--tw-text-opacity: 1;
+	color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
+
 .art-style {
 	display: grid;
 	width: 100%;
