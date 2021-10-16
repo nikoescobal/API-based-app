@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'nunito': ['"Nunito"', 'sans-serif'],
-        'italianno': ['"Italianno"', 'cursive'],
-        'raleway': ['"Raleway"', 'sans-serif'],
-      }
+        nunito: ['"Nunito"', 'sans-serif'],
+        italianno: ['"Italianno"', 'cursive'],
+        raleway: ['"Raleway"', 'sans-serif'],
+      },
     },
   },
   variants: {

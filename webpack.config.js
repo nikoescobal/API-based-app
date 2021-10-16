@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'leaderboard-app',
+      title: 'API-based-app',
       template: './src/index.html',
     }),
   ],
