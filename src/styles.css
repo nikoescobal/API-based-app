@@ -16,12 +16,28 @@ body {
   @apply hover:text-blue-700 cursor-pointer;
 }
 
+.title {
+  @apply font-bold font-raleway text-lg;
+}
+
+.artist {
+  @apply px-3 font-extralight font-raleway;
+}
+
 .art-style {
   @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 gap-4;
 }
 
 .article-style {
   @apply flex justify-center w-full h-full p-3 flex-col space-y-2 rounded border-double border-4 border-blue-900 bg-blue-50;
+}
+
+.caption-container {
+  @apply flex justify-between px-3 space-x-4;
+}
+
+.caption-content {
+  @apply flex py-3 space-x-6 text-base w-full font-nunito;
 }
 
 .image-style {

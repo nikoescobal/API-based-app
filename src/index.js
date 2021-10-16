@@ -3,15 +3,30 @@ const artContent = document.createElement('div');
 const artContainer = document.getElementById('art-container');
 artContent.classList.add('art-style');
 
-function postlike() {
-  console.log('hello');
-}
+function addLikes(index) {
+  let likeCount = 0;
+  const likeCounterElement = document.querySelectorAll('.like-count');
+  likeCounterElement.forEach((likeElement, likeElementIndex) => {
+    if (index === likeElementIndex) {
+      likeCount++;
+      likeElement.innerHTML += `${likeCount}Likes`;
+    }
+  });
+};
+
+const getLikeElements = () => {
+  const hearts = document.querySelectorAll('.like');
+  hearts.forEach((heart, index) => {
+    heart.addEventListener('click', (e) => {
+      addLikes(index)
+    })
+  });
+};
 
 const getImages = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const images = data.data;
-
 
   const imageString = images.map((image) => ({
       id: image.id,
@@ -21,32 +36,27 @@ const getImages = async () => {
       artist: image.artist_title,
     }))
     .filter((image) => image.image_id !== null && image.artist !== null)
-
     .map((img) => `<article
       class="article-style">
-      <h2 class="font-bold font-raleway text-lg">${img.title},
+      <h2 class="title">${img.title},
         ${img.date}</h2>
-      <h3 class="px-3 font-extralight font-raleway">${img.artist}</h3>
+      <h3 class="artist">${img.artist}</h3>
       <img class="image-style" src="https://www.artic.edu/iiif/2/${img.image_id}/full/843,/0/default.jpg"
         alt="image of artwork">
-      <figure class="flex justify-between px-3 space-x-4">
-        <figcaption class="caption-container flex py-3 space-x-6 text-base w-full font-nunito">
-          <img class="like" id="${img.id}" src="/src/heart-empty.png" alt="heart icon">&nbsp; Like
-          <img id="${img.id}" src="/src/comment.png" alt="comment icon">&nbsp; Comment
+      <figure class="caption-container">
+        <figcaption class="caption-content">
+          <img class="like" id="${img.id}" src="/src/heart-empty.png" alt="heart icon">&nbsp; <span class="like-count"></span>
+          <img class="comment" id="${img.id}" src="/src/comment.png" alt="comment icon">&nbsp; Comment
         </figcaption>
       </figure>
     </article>`).join('');
   artContent.innerHTML = imageString;
   artContainer.appendChild(artContent);
-  console.log(imageString);
+  getLikeElements();
 };
 getImages();
 
 // const like = document.getElementsByClassName('like');
-
-// function addLikes() {
-//   console.log('poop');
-// }
 
 // like.addEventListener('click', addLikes);
 

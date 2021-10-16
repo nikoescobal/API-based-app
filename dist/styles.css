@@ -493,89 +493,20 @@ video {
 .w-8 {
 	width: 2rem;
 }
-.flex-col {
-	flex-direction: column;
-}
 .items-center {
 	align-items: center;
-}
-.justify-center {
-	justify-content: center;
-}
-.justify-between {
-	justify-content: space-between;
-}
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-y-reverse: 0;
-	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(1rem * var(--tw-space-x-reverse));
-	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-	margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .rounded {
 	border-radius: 0.25rem;
 }
-.border-4 {
-	border-width: 4px;
-}
-.border-double {
-	border-style: double;
-}
-.border-blue-300 {
-	--tw-border-opacity: 1;
-	border-color: rgba(147, 197, 253, var(--tw-border-opacity));
-}
-.bg-white {
-	--tw-bg-opacity: 1;
-	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
 .p-6 {
 	padding: 1.5rem;
-}
-.p-3 {
-	padding: 0.75rem;
-}
-.px-3 {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
-}
-.py-3 {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
 }
 .text-center {
 	text-align: center;
 }
 .align-middle {
 	vertical-align: middle;
-}
-.font-raleway {
-	font-family: "Raleway", sans-serif;
-}
-.font-nunito {
-	font-family: "Nunito", sans-serif;
-}
-.text-lg {
-	font-size: 1.125rem;
-	line-height: 1.75rem;
-}
-.text-base {
-	font-size: 1rem;
-	line-height: 1.5rem;
-}
-.font-bold {
-	font-weight: 700;
-}
-.font-extralight {
-	font-weight: 200;
 }
 
 body {
@@ -590,6 +521,20 @@ body {
 #collection:hover, #logo:hover, #art:hover, #reserve:hover, #artworks:hover {
 	--tw-text-opacity: 1;
 	color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
+
+.title {
+	font-family: "Raleway", sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 700;
+}
+
+.artist {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	font-family: "Raleway", sans-serif;
+	font-weight: 200;
 }
 
 .art-style {
@@ -635,6 +580,41 @@ body {
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
 	padding: 0.75rem;
+}
+
+.caption-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.caption-container > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * var(--tw-space-x-reverse));
+	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.caption-container {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.caption-content {
+	display: flex;
+	width: 100%;
+}
+
+.caption-content > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+	margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.caption-content {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	font-family: "Nunito", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .image-style {
