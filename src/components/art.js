@@ -1,96 +1,55 @@
-const grab = (e) => document.getElementById(e);
-const subBtn = document.querySelector('.sub')
-const updateLikes = async (appID) => {
-  await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes`)
-    .then(response => response.json())
-    .then((data) => {
-      data.forEach((article) => {
-        grab('l_' + article.item_id).innerText = article.likes
-      })
-    })
-};
+// const grab = (e) => document.getElementById(e);
+// const subBtn = document.querySelector('.sub')
 
-const article = (
-  imgName,
-  imgId,
-  title,
-  date,
-  imageURL,
-  appID
-) => {
-  const artContent = document.createElement('div');
-  artContent.id = 'art-container'
-  artContent.classList.add('art-style');
+// const renderComment = (arr) => {
+//   const commentContainer = grab('popComment')
+//   commentContainer.innerHTML = '';
+//   if (arr) {
+//     arr.forEach((item) => {
+//       commentContainer.innerHTML += `
+//       <div>
+//       <p>
+//       ${item.creation_date} ${item.username}: ${item.comment}
+//       </p>
+//       </div>
+//       <br>
+//       `
+//     })
+//   }
+// }
+// async function getComment(id, appID) {
+//   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Y5ExZ6TMJ2KXP15dXk0s/comments?item_id=${id}`)
+//     .then(r => r.json())
+//     .then(d => {
+//       renderComment(d)
+//     })
+// }
+// const commentGetter = (id, appID) => {
+//   subBtn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     alert('hi' + id)
+//     const name = grab('name')
+//     const comment = grab('comment')
+//     if (name.value === '' && comment.value === '') return
+//     createMovieComment(id, name.value, comment.value, appID)
+//     console.log(name.value, comment.value);
+//     name.value = ''
+//     comment.value = ''
+//   })
+// }
+// const popup = async (image, id, appID) => {
+//   commentGetter(id, appID)
+//   const commentForImages = getComment(id)
+//   console.log(commentForImages);
+//   grab('popup-image').src = image
+//   grab('popup').classList.add('container')
+// }
 
-  const article = document.createElement('article')
-  article.className = 'article-style'
-  article.classList.add('art-style')
-  const h2 = document.createElement('h2')
-  h2.className = 'title'
-  h2.innerText = title + ' ' + date
-  const h3 = document.createElement('h3')
-  h3.className = 'artist'
-  h3.textContent = imgName
-  const mainImage = document.createElement('img')
-  mainImage.src = imageURL
-  mainImage.className = "image-style"
-  const figure = document.createElement('figure')
-  figure.className = 'caption-container'
-  const figCaption = document.createElement('figcaption')
-  figCaption.className = 'caption-content'
-  const span = document.createElement('span')
-  span.id = 'l_' + imgId
-  span.innerText = '0'
-  const div = document.createElement('div')
-  const imageHeart = document.createElement('img')
-  imageHeart.src = "/src/assets/heart-filled.png"
-  imageHeart.addEventListener('click', async () => {
-    await like(imgId, appID)
-  })
-  div.appendChild(span)
-  div.appendChild(imageHeart)
-  figCaption.appendChild(div)
-  const imgComent = document.createElement('img')
-  imgComent.src = "/src/assets/comment.png"
-  const button = document.createElement('button')
-  button.className = 'btns'
-  button.id = imgId
-  button.innerText = 'Comment'
-  button.addEventListener('click', () => {
-    popup(imageURL, imgId, appID)
-  })
-  artContent.appendChild(article)
-  article.appendChild(h2)
-  article.appendChild(h3)
-  article.appendChild(mainImage)
-  article.appendChild(figure)
-  figure.appendChild(figCaption)
-  figCaption.appendChild(imageHeart)
-  figCaption.appendChild(imgComent)
-  figCaption.appendChild(button)
-  article.appendChild(figCaption)
-  return article
-}
-
-const like = async (id, appID) => {
-  await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes/`, {
-    method: 'Post',
-    headers: {
-      'content-type': 'application/json; charset=UTF-8'
-    },
-    body: JSON.stringify({
-      item_id: id
-    })
-  }).then(async () => {
-    await updateLikes(appID)
-  })
-};
-
-export {
-  popup,
-  updateLikes,
-  createMovieComment,
-  getComment,
-  commentGetter
-}
-export default article
+// export {
+//   popup,
+//   updateLikes,
+//   createMovieComment,
+//   getComment,
+//   commentGetter
+// }
+// export default article
