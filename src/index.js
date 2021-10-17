@@ -66,9 +66,6 @@ getImages();
 
 // const like = document.getElementsByClassName('like');
 
-<<<<<<< HEAD
-getImages();
-=======
 // like.addEventListener('click', addLikes);
 
 // document.getElementsByClass('caption-container').addEventListener("click", () => {
@@ -78,4 +75,3 @@ getImages();
 // document.querySelector('#logo').addEventListener("click", () => {
 //   console.log('hello');
 // });
->>>>>>> f04cae93d53c00c675f9c6ad597c65f72fa6ad34
