@@ -11,6 +11,9 @@ In this project, we built a web-based API app to fetch and display art images fr
 - Chicago API(https://api.artic.edu/docs/#quick-start)
 - Lots of love :heart:
 
+# Video Explainer
+[Link to Video](https://drive.google.com/file/d/1SpMrirGbrrSEnGv094v-xoquZix2jH0V/view?usp=sharing)
+
 ## API 
  Information on how to use the API can be found [here](https://api.artic.edu/docs/#introduction)
  
@@ -70,7 +73,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- Thanks to Chad Van Wyk(https://github.com/El-Potato-Slayer) and Muhammad Sesay(https://github.com/mmsesay) for the support
+- Thanks to [Chad Van Wyk](https://github.com/El-Potato-Slayer) and [Muhammad Sesay](https://github.com/mmsesay) for the support
 
 ## 📝 MIT License
 
