@@ -15,7 +15,7 @@ In this project, we built a web-based API app to fetch and display art images fr
  Information on how to use the API can be found [here](https://api.artic.edu/docs/#introduction)
  
 ## Live Demo
-[Live Link comming soon]()
+[Live Link]()
 
 # Main Section
 ![homepage-screenshot (1)](https://user-images.githubusercontent.com/62937819/137616641-ae009d55-ff24-4729-b41a-0ddf4edddff7.png)
@@ -25,17 +25,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 - Clone this repository. 
-- Navigate to the project folder (Library) and open the ``index.html`` with the browser.
+- Navigate to the project folder (Library) and open the `index.html` with the browser.
 - Run `npm i` to install all dependencies such as Webpack and Tailwind
+- Run `npm run start-dev` 
+- Then open the code with Live Server from the `index.html` file in the `dist` folder 
 
   
 ### Linters
 - [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
 - [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) - Base styleguide to enforce rules
 - 
-## Acknowledgments
-- Microverse
-- 
+
 ## Run Tests
 
 ```
@@ -52,7 +52,6 @@ npx eslint .
  <a href="mailto:niko.escobal@gmail.com?subject=Sup Niko?"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
  
  # 👤 Taro Chilongoshi
-- GitHub: [@githubhandle](https://github.com/Tchiloross)
 [<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/tchilo)
 [<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/taro-chilongoshi-1a7125141/)
  <a href="mailto:tchiloross@gmail.com?subject=Hey I'm Taro!"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
@@ -71,7 +70,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- The Odin Project
+- Thanks to Chad Van Wyk(https://github.com/El-Potato-Slayer) and Muhammad Sesay(https://github.com/mmsesay) for the support
 
 ## 📝 MIT License
 
